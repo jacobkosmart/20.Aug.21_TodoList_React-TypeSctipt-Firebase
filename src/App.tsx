@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import InputField from "./components/InputField";
 import TodoList from "./components/TodoList";
 import { Todo } from "./model";
@@ -7,7 +7,15 @@ import "./style/App.scss";
 const App: React.FC = () => {
   // State
   const [todo, setTodo] = useState<string>("");
-  const [todos, setTodos] = useState<Todo[]>([]);
+  const [todos, setTodos] = useState<Todo[]>(() => {
+    // Called from stored todos from localStorage
+    const savedTodos = localStorage.getItem("todos");
+    if (savedTodos) {
+      return JSON.parse(savedTodos);
+    } else {
+      return [];
+    }
+  });
 
   const handleAdd = (e: React.FormEvent) => {
     e.preventDefault();
@@ -18,7 +26,9 @@ const App: React.FC = () => {
     }
   };
 
-  console.log(todos);
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
   return (
     <div className="App">
