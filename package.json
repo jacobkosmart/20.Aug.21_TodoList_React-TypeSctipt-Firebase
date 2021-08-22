@@ -11,6 +11,7 @@
     "@types/react": "^17.0.0",
     "@types/react-beautiful-dnd": "^13.1.1",
     "@types/react-dom": "^17.0.0",
+    "netlify-cli": "^6.7.1",
     "node-sass": "4.14.1",
     "react": "^17.0.2",
     "react-beautiful-dnd": "^13.1.0",
@@ -24,7 +25,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "netlify deploy"
   },
   "eslintConfig": {
     "extends": [

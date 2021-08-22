@@ -4,7 +4,7 @@ import TodoList from "./components/TodoList";
 import { Todo } from "./model";
 import "./style/App.scss";
 import { DragDropContext, DropResult } from "react-beautiful-dnd";
-import { stringify } from "querystring";
+import mainTitle from "./mainTitle.svg";
 
 const App: React.FC = () => {
   // State
@@ -92,7 +92,7 @@ const App: React.FC = () => {
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <div className="App">
-        <span className="heading">To Do List</span>
+        <img src={mainTitle} alt="title" className="heading" />
         <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
         <TodoList
           todos={todos}
