@@ -5,6 +5,7 @@ import { Todo } from "./model";
 import "./style/App.scss";
 import { DragDropContext, DropResult } from "react-beautiful-dnd";
 import mainTitle from "./mainTitle.svg";
+import { AiFillGithub, AiOutlineHome, AiOutlineMail } from "react-icons/ai";
 
 const App: React.FC = () => {
   // State
@@ -100,6 +101,26 @@ const App: React.FC = () => {
           completedTodos={completedTodos}
           setCompletedTodos={setCompletedTodos}
         />
+        <div className="footer">
+          <footer className="footer__text">
+            &copy; {new Date().getFullYear()} Jacob Ko
+          </footer>
+          <div className="footer__logo">
+            <a href="https://jacobko.info/" target="_blank" rel="noreferrer">
+              <AiOutlineHome />
+            </a>
+            <a
+              href="https://github.com/jacobkosmart"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <AiFillGithub />
+              <a href="mailto: jacobkosmart@gmail.com">
+                <AiOutlineMail />
+              </a>
+            </a>
+          </div>
+        </div>
       </div>
     </DragDropContext>
   );

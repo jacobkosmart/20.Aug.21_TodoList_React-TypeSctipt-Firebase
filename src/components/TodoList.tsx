@@ -27,7 +27,7 @@ const TodoList: React.FC<Props> = ({
               ref={provided.innerRef}
               {...provided.droppableProps}
             >
-              <span className="todos__heading">To Do..</span>
+              <span className="todos__heading">To Do</span>
               {todos.map((todo, index) => (
                 <SingleTodo
                   index={index}
@@ -51,7 +51,7 @@ const TodoList: React.FC<Props> = ({
               ref={provided.innerRef}
               {...provided.droppableProps}
             >
-              <span className="remove__heading">Completed..</span>
+              <span className="remove__heading">Completed</span>
               {completedTodos.map((todo, index) => (
                 <SingleTodo
                   index={index}
