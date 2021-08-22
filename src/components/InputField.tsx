@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import "../style/App.scss";
+import { AiOutlineSend } from "react-icons/ai";
 
 interface Props {
   todo: string;
@@ -28,7 +29,7 @@ const InputField: React.FC<Props> = ({ todo, setTodo, handleAdd }) => {
           className="input__box"
         />
         <button className="input__submit" type="submit">
-          Go
+          <AiOutlineSend />
         </button>
       </form>
     </>

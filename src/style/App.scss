@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Neucha&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
 
 @import "media-queries";
 @import "color";
@@ -9,8 +9,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: $primary;
-  font-family: "Neucha", cursive;
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
+  font-family: "Do Hyeon", sans-serif;
 
   .heading {
     text-transform: uppercase;
@@ -31,12 +32,13 @@
 
 .input {
   display: flex;
-  width: 90%;
+  width: 95%;
   position: relative;
   align-items: center;
+  margin-bottom: 20px;
 
   @include tablet {
-    width: 95%;
+    width: 85%;
   }
 
   &__box {
@@ -47,6 +49,10 @@
     border: none;
     transition: 0.2s;
     box-shadow: inset 0 0 5px black;
+
+    @include tablet {
+      font-size: 15px;
+    }
 
     &:focus {
       box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.5);
@@ -59,14 +65,23 @@
     width: 50px;
     height: 50px;
     margin: 12px;
+    padding-top: 5px;
+    padding-left: 5px;
     border-radius: 50px;
     right: 0px;
     border: none;
-    font-size: 15px;
-    background-color: $primary;
-    color: $secondary;
+    font-size: 20px;
+    background-color: #0cbaba;
+    color: #000;
     transition: 0.2s all;
     box-shadow: 0 0 10px black;
+    cursor: pointer;
+
+    @include tablet {
+      width: 40px;
+      height: 40px;
+      margin: 20px;
+    }
 
     &:hover {
       background-color: $brightBlue;
@@ -80,44 +95,105 @@
 
 // TodoList
 
-.todos {
+.container {
+  width: 95%;
   display: flex;
-  justify-content: space-evenly;
-  width: 90%;
-  flex-wrap: wrap;
+  margin-top: 10px;
+  justify-content: space-between;
+  align-items: flex-start;
 
   @include tablet {
-    width: 95%;
+    width: 80%;
+    flex-direction: column;
   }
 
-  // SingleTodo
-
-  &__single {
-    display: flex;
-    width: 29.5%;
+  .todos {
     border-radius: 5px;
-    padding: 20px;
-    margin-top: 15px;
-    background-image: url("https://img.freepik.com/free-photo/crumpled-yellow-paper-background-close-up_60487-2390.jpg?size=626&ext=jpg");
+    display: flex;
+    flex-direction: column;
+    width: 47.5%;
+    padding: 15px;
+    background-color: #abe9cd;
+    background-image: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);
+
+    &__heading {
+      font-size: 30px;
+      color: #fff;
+    }
 
     @include tablet {
-      width: 100%;
-    }
-
-    &--text {
-      flex: 1;
-      padding: 5px;
-      border: none;
-      font-size: 20px;
-
-      &:focus {
-        outline: none;
+      width: 95%;
+      margin-bottom: 10px;
+      &__heading {
+        font-size: 25px;
       }
     }
-    .icon {
-      margin-left: 10px;
-      font-size: 25px;
-      cursor: pointer;
+  }
+
+  .remove {
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 47.5%;
+    padding: 15px;
+    background-color: #3f0d12;
+    background-image: linear-gradient(315deg, #3f0d12 0%, #a71d31 74%);
+
+    &__heading {
+      font-size: 30px;
+      color: #fff;
+    }
+
+    @include tablet {
+      width: 95%;
+      margin-bottom: 10px;
+      &__heading {
+        font-size: 25px;
+      }
+    }
+  }
+}
+
+// SingleTodo
+
+.todos__single {
+  display: flex;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 15px;
+  background-image: url("https://img.freepik.com/free-photo/crumpled-yellow-paper-background-close-up_60487-2390.jpg?size=626&ext=jpg");
+  transition: 0.2s;
+
+  @include tablet {
+    padding: 10px;
+  }
+
+  &:hover {
+    box-shadow: 0 0 5px black;
+    transform: scale(1.03);
+  }
+
+  &--text {
+    flex: 1;
+    padding: 5px;
+    border: none;
+    font-size: 20px;
+
+    @include tablet {
+      font-size: 15px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+  .icon {
+    margin-left: 10px;
+    font-size: 25px;
+    cursor: pointer;
+
+    @include tablet {
+      font-size: 20px;
     }
   }
 }
