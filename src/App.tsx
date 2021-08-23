@@ -33,7 +33,7 @@ const App: React.FC = () => {
   const handleAdd = (e: React.FormEvent) => {
     e.preventDefault();
     if (todo) {
-      setTodos([...todos, { id: Date.now(), todo, isDone: false }]);
+      setTodos([{ id: Date.now(), todo, isDone: false }, ...todos]);
       localStorage.setItem("todo", JSON.stringify(todos));
 
       // cleanUp todo
