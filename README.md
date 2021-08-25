@@ -229,3 +229,11 @@ const handleDelete = (id: number) => {
 ### C.PWA
 
 > PWA 만들기 과정 및 관련 내용 (Jacob's DevLog) - [https://jacobko.info/pwa/pwa/](https://jacobko.info/pwa/pwa/)
+
+## 💡 4. Reference
+
+Type Reference - [https://flow.org/en/docs/react/types/](https://flow.org/en/docs/react/types/)
+
+react-beautiful-dnd Github - [https://github.com/atlassian/react-beautiful-dnd](https://github.com/atlassian/react-beautiful-dnd)
+
+React Drag and Drop Tutorial - [https://www.youtube.com/watch?v=uEVHJf30bWI](https://www.youtube.com/watch?v=uEVHJf30bWI)
