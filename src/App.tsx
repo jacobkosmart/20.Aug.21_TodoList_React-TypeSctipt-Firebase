@@ -110,7 +110,7 @@ const App: React.FC = () => {
               <AiOutlineHome />
             </a>
             <a
-              href="https://github.com/jacobkosmart"
+              href="https://github.com/jacobkosmart/todolist-react-typesctipt"
               target="_blank"
               rel="noreferrer"
             >
